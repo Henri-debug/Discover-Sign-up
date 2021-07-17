@@ -237,3 +237,7 @@ color: #5199FF;
 .member p{
     margin-right: 15px;
 }
+img{
+    width: 100%;
+    height: 100%;
+}
