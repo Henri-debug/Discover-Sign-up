@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../Index.css">
+    <script src="https://kit.fontawesome.com/7b43bb7f71.js" crossorigin="anonymous"></script>
+
+    <title>Discover</title>
+</head>
+
+<body>
+
+    <div class="content">
+
+        <div class="first-content">
+            <div class="text">
+                <div class="p-text">
+                    <p>Discover</p>
+                    <p>The world of</p>
+                    <p>Images</p>
+                </div>
+
+            </div>
+            <img src="./images/image.svg">
+        </div>
+        <div class="second-content">
+            <div class="member">
+                <p>Already Member?<a href=""> Sign in</a></p>
+            </div>
+            
+            <form action="/register" method="POST" class="form">
+                <div class="p-class">
+                    <p>Join With Us!</p>
+                </div>
+                <div class="sign-in">
+                    <button class="sign" id="google"><a href="#"><i class="fab fa-google"></i> Sign up With
+                            Google</a></button>
+                    <button class="sign" id="face"><a href="#"><i class="fab fa-facebook-f"></i></a></button>
+                    <button class="sign" id="twitter"><a href="#"><i class="fab fa-twitter"></i></a></button>
+                </div>
+                <label>Or</label>
+                <div class="input-fields">
+                    <div class="names">
+                        <div class="name-fullname">
+                            <label for="fullname">Fullname</label>
+                            <input type="text" id="fullname" name="fullname">
+                        </div>
+                        <div class="name-username">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username">
+                        </div>
+                    </div>
+                    <div class="input-email">
+                        <label for="email">Email Adress</label>
+                        <input type="email" name="email">
+                    </div>
+                    <div class="input-password">
+                        <label for="Password">Password</label>
+                        <input type="password" name="password">
+                    </div>
+                    <div class="create-account-button">
+                        <input type="submit" value="Create Account">
+                    </div>
+
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
