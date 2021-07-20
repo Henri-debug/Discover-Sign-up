@@ -1,3 +1,4 @@
+const axios = require("axios");
 const express = require("express");
 const app = express();
 const connection = require("./Database/connection");
@@ -35,19 +36,28 @@ app.get('/',function(req,res){
 
 app.post('/register',function(req,res){
         const {fullname,username,password,email} = req.body;
+        
 
-        Register.create({
+        if(fullname != "" && fullname != " " && username != "" && username != " " && password != "" && password != " " && email != "" && email != " "){
+            Register.create({
               
-             username:username,
-             fullname:fullname,
-             password:password,
-             email:email
-
-        }).then(()=>{
-            res.redirect('/');
-        }).catch((err)=>{
-            console.log("Error Create Register:"+err);
-        });
+                username:username,
+                fullname:fullname,
+                password:password,
+                email:email
+   
+           }).then(()=>{
+               res.json({"success":"Cadastro feito com sucesso"});
+               
+           }).catch((err)=>{
+               res.json({"error":"Algum erro inesperado foi encontrado, tente novamente"});
+               console.log("Error Create Register:"+err);
+           });       
+        }else{
+            res.json({"error":"Por favor preencha todos os campos"});
+            console.log("deu certo");
+        }
+        
 
 
 
